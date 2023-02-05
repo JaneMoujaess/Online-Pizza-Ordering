@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3AF8F249-093B-4A56-A388-4F9580684DAA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Sem_7_Project___Design_Patterns</RootNamespace>
+    <AssemblyName>Sem 7 Project - Design Patterns</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\..\Desktop\Sem 7\Design Patterns\Guna.UI2.WinForms.2.0.2.9\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\CartData.cs" />
+    <Compile Include="Classes\Observer_Cart.cs" />
+    <Compile Include="Classes\ChicagoStyleChickenPizza.cs" />
+    <Compile Include="Classes\ChicagoStylePepperoniPizza.cs" />
+    <Compile Include="Classes\ChicagoStylePizzaFactory.cs" />
+    <Compile Include="Classes\ChicagoStyleVeggiePizza.cs" />
+    <Compile Include="Classes\Observable_CurrencyRate.cs" />
+    <Compile Include="Classes\Observable_DollarRate.cs" />
+    <Compile Include="Classes\HamPizzaDecorator.cs" />
+    <Compile Include="Classes\NYStyleChickenPizza.cs" />
+    <Compile Include="Classes\NYStylePepperoniPizza.cs" />
+    <Compile Include="Classes\NYStylePizzaFactory.cs" />
+    <Compile Include="Classes\NYStyleVeggiePizza.cs" />
+    <Compile Include="Classes\Observer.cs" />
+    <Compile Include="Classes\BaconPizzaDecorator.cs" />
+    <Compile Include="Classes\PineapplePizzaDecorator.cs" />
+    <Compile Include="Classes\Pizza.cs" />
+    <Compile Include="Classes\PizzaDecorator.cs" />
+    <Compile Include="Classes\PizzaFactory.cs" />
+    <Compile Include="Forms\Cart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cart.Designer.cs">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChicagoPizzaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChicagoPizzaForm.Designer.cs">
+      <DependentUpon>ChicagoPizzaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NYPizzaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NYPizzaForm.Designer.cs">
+      <DependentUpon>NYPizzaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PizzaTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PizzaTypeForm.Designer.cs">
+      <DependentUpon>PizzaTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IObservable.cs" />
+    <Compile Include="Interfaces\IObserver.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Cart.resx">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChicagoPizzaForm.resx">
+      <DependentUpon>ChicagoPizzaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NYPizzaForm.resx">
+      <DependentUpon>NYPizzaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PizzaTypeForm.resx">
+      <DependentUpon>PizzaTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vecteezy_pizzeria-vector-emblem-on-blackboard-pizza-logo-template_11157893.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NYStylePizza-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NYStylePizza.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChicagoStylePizza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThinCrustPepperoni.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chicken.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThinCrustChicken.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThinCrustVeggie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pineapple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ham.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bacon-png-image-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pepperoni.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chicken-Supreme-p1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chickenranch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back3-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background3.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
