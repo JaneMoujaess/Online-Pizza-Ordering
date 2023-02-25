@@ -1,3 +1,3 @@
 # Online Pizza Ordering
-This project is a prototype of an online pizza ordering platform.
+This project is a prototype of a pizza ordering platform.
 Structured with design patterns.
